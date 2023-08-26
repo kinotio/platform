@@ -1,7 +1,11 @@
-export default function Home() {
+import Header from '@/components/header'
+
+const Page = () => {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Kinotio platform 🚀🌱</h1>
+    <main className='bg-white'>
+      <Header />
     </main>
   )
 }
+
+export default Page

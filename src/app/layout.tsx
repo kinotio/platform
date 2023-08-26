@@ -10,10 +10,12 @@ export const metadata: Metadata = {
     'Kinotio is collaborative digital space where software, applications, or projects are developed and shared openly.'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
+
+export default RootLayout

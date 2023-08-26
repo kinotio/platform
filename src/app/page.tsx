@@ -1,9 +1,13 @@
 import Header from '@/components/header'
+import Hero from '@/components/hero'
 
 const Page = () => {
   return (
     <main className='bg-white'>
-      <Header />
+      <div className='kn-hero-container'>
+        <Header />
+        {/* <Hero /> */}
+      </div>
     </main>
   )
 }

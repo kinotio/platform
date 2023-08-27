@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="./src/assets/readme-banner.png"
+    src="./src/assets/banner.png"
     alt="Kinotio"
     style="width:100%;"
   />
@@ -13,4 +13,4 @@ Kinotio is collaborative digital space where software, applications, or projects
 
 ## License
 
-Weal is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).

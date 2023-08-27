@@ -8,11 +8,12 @@
   box-sizing: border-box;
 }
 
-.kn-hero-container {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/landing-spaces.png"); */
-  background-image: url("../assets/landing-spaces.png");
+.kn-header-and-hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/astronauts.png");
+  /* background-image: url("/assets/background.png"); */
   background-size: cover;
   background-repeat: no-repeat;
+
   height: 100vh;
 }

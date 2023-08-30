@@ -25,7 +25,7 @@ export const help: Array<CommonType> = [
   },
   {
     name: 'LinkedIn',
-    link: '#'
+    link: 'https://linkedin.com/company/kinotio'
   },
   {
     name: 'Contact Us',
@@ -52,7 +52,7 @@ export const social = [
   {
     name: 'LinkedIn',
     icon: LinkedInIcon,
-    link: '#'
+    link: 'https://linkedin.com/company/kinotio'
   },
   {
     name: 'Discord server',
@@ -62,6 +62,6 @@ export const social = [
   {
     name: 'GitHub',
     icon: GitHubIcon,
-    link: '#'
+    link: 'https://github.com/kinotio'
   }
 ]

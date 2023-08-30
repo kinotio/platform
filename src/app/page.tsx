@@ -1,6 +1,7 @@
 import Header from '@/components/header'
 import Hero from '@/components/hero'
 import Commitments from '@/components/commitments'
+import Footer from '@/components/footer'
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <div>
         <Commitments />
       </div>
+      <Footer />
     </main>
   )
 }

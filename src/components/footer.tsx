@@ -1,4 +1,4 @@
-import { community, help, legal, social } from '@/constants/footer'
+import { community, help, legal, social } from '@/mocks/footer'
 
 const Footer = () => {
   return (

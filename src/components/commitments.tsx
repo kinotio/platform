@@ -1,4 +1,4 @@
-import { commitments } from '@/constants/commitments'
+import { commitments } from '@/mocks/commitments'
 
 const Commitments = () => {
   return (

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.{ts,tsx}\""
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -27,6 +28,8 @@
   },
   "devDependencies": {
     "@types/prettier": "^3.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2"
   }
 }

@@ -2,7 +2,9 @@ import {
   ChatBubbleLeftRightIcon,
   TrophyIcon,
   UserGroupIcon,
-  RocketLaunchIcon
+  EyeIcon,
+  Square3Stack3DIcon,
+  PaperAirplaneIcon
 } from '@heroicons/react/24/solid'
 
 export const commitments = [
@@ -25,9 +27,21 @@ export const commitments = [
     icon: UserGroupIcon
   },
   {
-    name: 'Giving Back to the Community',
+    name: 'Knowledge Sharing',
     description:
-      'We recognize that the open source movement thrives on giving back. As contributors, we give our time, expertise, and creativity to benefit the global developer community. Our commitment extends beyond our projects, as we actively engage in outreach, education, and support initiatives to ensure that the broader open source ecosystem flourishes.',
-    icon: RocketLaunchIcon
+      'We believe in the power of knowledge sharing. Our community is committed to openly sharing insights, best practices, and technical expertise across various disciplines within software development and testing.',
+    icon: PaperAirplaneIcon
+  },
+  {
+    name: 'Diverse Perspectives',
+    description:
+      'Diversity drives innovation. We embrace contributors from all walks of life, backgrounds, and experiences, recognizing that a diverse group of minds enhances our problem-solving abilities and enriches our projects.',
+    icon: EyeIcon
+  },
+  {
+    name: 'Collaborative Projects',
+    description:
+      'From open source software development to collaborative bug bashes, we actively engage in projects that challenge us, spark creativity, and drive meaningful impact.',
+    icon: Square3Stack3DIcon
   }
 ]

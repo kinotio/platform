@@ -1,0 +1,19 @@
+{
+  "name": "kinotio-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bullseye",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "postAttachCommand": "npm run dev",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "ms-vscode-remote.remote-containers"]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [3000]
+}

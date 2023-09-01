@@ -18,9 +18,15 @@
   height: 100vh;
 }
 
-.kn-footer-container {
+.kn-bg-spaces {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/assets/spaces.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.kn-contact-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }

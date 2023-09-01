@@ -1,7 +1,3 @@
-import DiscordIcon from '@/components/icons/discord'
-import GitHubIcon from '@/components/icons/github'
-import LinkedInIcon from '@/components/icons/linkedin'
-
 interface CommonType {
   name: string
   link: string
@@ -21,7 +17,7 @@ export const community: Array<CommonType> = [
 export const help: Array<CommonType> = [
   {
     name: 'Discord Server',
-    link: '#'
+    link: 'https://discord.gg/SDw3amGc'
   },
   {
     name: 'LinkedIn',
@@ -45,23 +41,5 @@ export const legal: Array<CommonType> = [
   {
     name: 'Terms & Conditions',
     link: '#'
-  }
-]
-
-export const social = [
-  {
-    name: 'LinkedIn',
-    icon: LinkedInIcon,
-    link: 'https://linkedin.com/company/kinotio'
-  },
-  {
-    name: 'Discord server',
-    icon: DiscordIcon,
-    link: '#'
-  },
-  {
-    name: 'GitHub',
-    icon: GitHubIcon,
-    link: 'https://github.com/kinotio'
   }
 ]

@@ -2,7 +2,7 @@ import { community, help, legal, social } from '@/mocks/footer'
 
 const Footer = () => {
   return (
-    <footer className='bg-blue-950 py-32 px-12'>
+    <footer className='py-32 px-12'>
       <div className='mx-auto w-full max-w-screen-xl'>
         <div className='grid grid-cols-1 gap-8 px-4 py-6 lg:grid-cols-3 lg:py-8 md:grid-cols-3'>
           <div>

@@ -15,7 +15,9 @@ const Page = () => {
       <div>
         <Commitments />
       </div>
-      <Footer />
+      <div className='kn-footer-container'>
+        <Footer />
+      </div>
     </main>
   )
 }

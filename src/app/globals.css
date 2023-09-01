@@ -17,3 +17,10 @@
 
   height: 100vh;
 }
+
+.kn-footer-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/spaces.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

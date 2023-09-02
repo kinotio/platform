@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import { navigation } from '@/mocks/header'
 
-const Header = () => {
+const HeaderSectionComponent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
 
   return (
@@ -107,4 +107,4 @@ const HeaderMenuMobileDialog = ({
   )
 }
 
-export default Header
+export default HeaderSectionComponent

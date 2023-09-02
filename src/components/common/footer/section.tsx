@@ -1,7 +1,7 @@
-import FooterSocialMediaComponent from '@/components/pages/footer/social'
-import FooterLegalComponent from '@/components/pages/footer/legal'
-import FooterHelpCenterComponent from '@/components/pages/footer/help'
-import FooterCommunityComponent from '@/components/pages/footer/community'
+import FooterSocialMediaComponent from '@/components/common/footer/social'
+import FooterLegalComponent from '@/components/common/footer/legal'
+import FooterHelpCenterComponent from '@/components/common/footer/help'
+import FooterCommunityComponent from '@/components/common/footer/community'
 
 const FooterSectionCompenent = () => {
   return (

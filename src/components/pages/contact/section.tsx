@@ -1,6 +1,6 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
-const Contact = () => {
+const ContactSectionComponent = () => {
   return (
     <section className='bg-white'>
       <div className='container px-6 py-24 sm:py-32 mx-auto'>
@@ -47,4 +47,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactSectionComponent

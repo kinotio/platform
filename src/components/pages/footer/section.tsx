@@ -1,9 +1,9 @@
 import FooterSocialMediaComponent from '@/components/pages/footer/social'
-import FooterLegalComponent from './pages/footer/legal'
-import FooterHelpCenterComponent from './pages/footer/help'
-import FooterCommunityComponent from './pages/footer/community'
+import FooterLegalComponent from '@/components/pages/footer/legal'
+import FooterHelpCenterComponent from '@/components/pages/footer/help'
+import FooterCommunityComponent from '@/components/pages/footer/community'
 
-const Footer = () => {
+const FooterSectionCompenent = () => {
   return (
     <footer className='kn-bg-spaces py-32 px-12'>
       <div className='mx-auto w-full max-w-screen-xl'>
@@ -19,4 +19,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterSectionCompenent

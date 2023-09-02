@@ -1,6 +1,6 @@
 import { commitments } from '@/mocks/commitments'
 
-const Commitments = () => {
+const CommitmentSectionCompenent = () => {
   return (
     <section className='bg-white'>
       <div className='py-24 sm:py-32'>
@@ -36,4 +36,4 @@ const Commitments = () => {
   )
 }
 
-export default Commitments
+export default CommitmentSectionCompenent

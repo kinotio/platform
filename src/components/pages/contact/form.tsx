@@ -1,4 +1,4 @@
-const ContactForm = () => {
+const ContactPageForm = () => {
   return (
     <form>
       <div className='-mx-2 md:items-center md:flex'>
@@ -38,4 +38,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default ContactPageForm

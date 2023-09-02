@@ -2,7 +2,7 @@ import DiscordIcon from '@/components/icons/discord'
 import GitHubIcon from '@/components/icons/github'
 import LinkedInIcon from '@/components/icons/linkedin'
 
-import ContactForm from '@/components/contact/form'
+import ContactForm from '@/components/pages/contact/form'
 
 const Page = () => {
   return (

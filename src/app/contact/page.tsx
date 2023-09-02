@@ -1,5 +1,8 @@
+import DiscordIcon from '@/components/icons/discord'
+import GitHubIcon from '@/components/icons/github'
+import LinkedInIcon from '@/components/icons/linkedin'
+
 import ContactForm from '@/components/contact/form'
-import { social } from '@/mocks/social'
 
 const Page = () => {
   return (
@@ -10,16 +13,29 @@ const Page = () => {
         <div className='mt-6 md:mt-8'>
           <h3 className='font-medium text-gray-600 dark:text-gray-500 '>Follow us</h3>
           <div className='flex mt-4 -mx-1.5'>
-            {social.map(({ name, icon: Icon, link }: { name: string; icon: any; link: string }) => (
-              <a
-                key={name}
-                href={link}
-                className='mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500'
-              >
-                <Icon />
-                <span className='sr-only'>{name}</span>
-              </a>
-            ))}
+            <a
+              href='https://discord.gg/SDw3amGc'
+              className='mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500'
+            >
+              <DiscordIcon />
+              <span className='sr-only'>Discord</span>
+            </a>
+
+            <a
+              href='https://github.com/kinotio'
+              className='mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500'
+            >
+              <GitHubIcon />
+              <span className='sr-only'>GitHub</span>
+            </a>
+
+            <a
+              href='https://linkedin.com/company/kinotio'
+              className='mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500'
+            >
+              <LinkedInIcon />
+              <span className='sr-only'>LinkedIn</span>
+            </a>
           </div>
         </div>
       </div>

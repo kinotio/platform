@@ -2,6 +2,7 @@ import Header from '@/components/header'
 import Hero from '@/components/hero'
 import Commitments from '@/components/commitments'
 import Footer from '@/components/footer'
+import Contact from '@/components/contact'
 
 const Page = () => {
   return (
@@ -14,6 +15,9 @@ const Page = () => {
       </div>
       <div>
         <Commitments />
+      </div>
+      <div>
+        <Contact />
       </div>
       <div>
         <Footer />

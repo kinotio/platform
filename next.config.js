@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/platform',
+  basePath: '/',
   images: {
     loader: 'akamai',
-    path: '/platform'
+    path: '/'
   }
 }
 

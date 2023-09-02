@@ -1,4 +1,4 @@
-import HeroSectionComponent from '@/components/hero'
+import HeroSectionComponent from '@/components/pages/hero/section'
 import CommitmentSectionCompenent from '@/components/pages/commitment/section'
 import NewsLetterSectionComponent from '@/components/pages/newletter/section'
 

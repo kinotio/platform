@@ -1,7 +1,7 @@
-import FooterSocialMediaComponent from '@/components/footer/social'
-import FooterLegalComponent from './footer/legal'
-import FooterHelpCenterComponent from './footer/help'
-import FooterCommunityComponent from './footer/community'
+import FooterSocialMediaComponent from '@/components/pages/footer/social'
+import FooterLegalComponent from './pages/footer/legal'
+import FooterHelpCenterComponent from './pages/footer/help'
+import FooterCommunityComponent from './pages/footer/community'
 
 const Footer = () => {
   return (

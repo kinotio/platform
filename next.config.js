@@ -5,7 +5,7 @@ const nextConfig = {
   basePath: '/platform',
   images: {
     loader: 'akamai',
-    path: '/'
+    path: '/platform'
   }
 }
 

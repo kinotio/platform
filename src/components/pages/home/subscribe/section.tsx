@@ -1,4 +1,4 @@
-import NewsLetterFormComponent from '@/components/pages/newletter/form'
+import NewsLetterFormComponent from '@/components/pages/home/subscribe/form'
 
 const NewsLetterSectionComponent = () => {
   return (

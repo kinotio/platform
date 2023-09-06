@@ -1,5 +1,5 @@
 # Define the name of the workflow
-name: Build
+name: build
 
 # Trigger the workflow on push and pull requests
 on: [push, pull_request]

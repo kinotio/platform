@@ -1,6 +1,6 @@
-import HeroSectionComponent from '@/components/pages/hero/section'
-import CommitmentSectionCompenent from '@/components/pages/commitment/section'
-import NewsLetterSectionComponent from '@/components/pages/newletter/section'
+import HeroSectionComponent from '@/components/pages/home/hero/section'
+import CommitmentSectionCompenent from '@/components/pages/home/commitment/section'
+import SubscribeFormComponent from '@/components/pages/home/subscribe/section'
 
 const Page = () => {
   return (
@@ -9,7 +9,7 @@ const Page = () => {
         <HeroSectionComponent />
       </div>
       <CommitmentSectionCompenent />
-      <NewsLetterSectionComponent />
+      <SubscribeFormComponent />
     </main>
   )
 }

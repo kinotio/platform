@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="./src/assets/banner.png"
+    src="./banner.png"
     alt="Kinotio"
     style="width:100%;"
   />

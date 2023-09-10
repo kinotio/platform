@@ -1,8 +1,16 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next'
+import { Poppins } from 'next/font/google'
+import { config } from '@fortawesome/fontawesome-svg-core'
+
+config.autoAddCss = false
+
+import HeaderComponent from '@/components/common/Header'
+import FooterComponent from '@/components/common/Footer'
+
+const inter = Poppins({ subsets: ['latin'], weight: '500' })
 
 export const metadata: Metadata = {
   title: 'Kinotio',
@@ -13,7 +21,11 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HeaderComponent />
+        {children}
+        <FooterComponent />
+      </body>
     </html>
   )
 }

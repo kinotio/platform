@@ -7,3 +7,13 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Garet Book";
+  src: url("/assets/fonts/garet/Garet-Book.ttf");
+}
+
+@font-face {
+  font-family: "Garet Heavy";
+  src: url("/assets/fonts/garet/Garet-Heavy.ttf");
+}

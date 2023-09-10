@@ -7,13 +7,7 @@ on: [push, pull_request]
 # Define the build job
 jobs:
   build:
-    # Name for the job
-    name: Build Job
-
-    # Use the latest version of Ubuntu
     runs-on: ubuntu-latest
-
-    # Define strategy for matrix builds
     strategy:
       fail-fast: false
       matrix:
@@ -25,7 +19,6 @@ jobs:
       # Checkout the code
       - name: Checkout Code
         uses: actions/checkout@v3
-
       # Detect the package manager (npm or yarn)
       - name: Detect Package Manager
         id: detect-package-manager
@@ -44,20 +37,17 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-
       # Setup Node with the specified version and cache
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node-version}}
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-
       # Configure Pages with the "next" static site generator
       - name: Configure Pages
         uses: actions/configure-pages@v3
         with:
           static_site_generator: next
-
       # Cache Node Modules for faster builds
       - name: Cache Node Modules
         uses: actions/cache@v3
@@ -67,11 +57,9 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-
       # Install project dependencies based on the detected package manager
       - name: Install Dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-
       # Run linting
       - name: Run Lint
         run: ${{ steps.detect-package-manager.outputs.manager }} run lint

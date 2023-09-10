@@ -2,9 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import HeaderSectionComponent from '@/components/common/header/section'
-import FooterSectionCompenent from '@/components/common/footer/section'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,11 +13,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <HeaderSectionComponent />
-        {children}
-        <FooterSectionCompenent />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

@@ -10,7 +10,7 @@ const HeroComponent = () => {
         <div className='w-full lg:w-1/2'>
           <div className='lg:max-w-lg'>
             <h1 className='text-3xl font-semibold text-gray-800 lg:text-4xl'>
-              Best place to be <span className='text-blue-400'>in</span>
+              Best place to be <span className='text-blue-400 font-garet-heavy'>in</span>
             </h1>
 
             <p className='mt-3 text-gray-600'>

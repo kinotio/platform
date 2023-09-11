@@ -17,3 +17,11 @@
   font-family: "Garet Heavy";
   src: url("/assets/fonts/garet/Garet-Heavy.ttf");
 }
+
+.font-garet-book {
+  font-family: "Garet Book", sans-serif;
+}
+
+.font-garet-heavy {
+  font-family: "Garet Heavy", sans-serif;
+}

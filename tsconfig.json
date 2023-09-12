@@ -23,8 +23,7 @@
       "@components/*": ["./components/*"],
       "@hooks/*": ["./hooks/*"],
       "@styles/*": ["./styles/*"],
-      "@pages/*": ["./pages/*"],
-      "@assets/*": ["./assets/*"],
+      "@modules/*": ["./modules/*"],
       "@lib/*": ["./lib/*"],
       "@utils/*": ["./utils/*"]
     },

@@ -21,7 +21,7 @@ const SubscribeForm = () => {
     const { error } = await supabase.from('subscribers').insert({ email })
 
     if (error) {
-      toast('We encountered an error when saving you has subscribers', {
+      toast('We encountered an error when saving you has subscribers, please retry', {
         type: 'error'
       })
       setIsLoading(false)

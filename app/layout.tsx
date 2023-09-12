@@ -9,8 +9,8 @@ import { ToastContainer } from 'react-toastify'
 
 config.autoAddCss = false
 
-import HeaderComponent from '@/components/common/HeaderComponent'
-import FooterComponent from '@/components/common/FooterComponent'
+import HeaderComponent from '@components/common/HeaderComponent'
+import FooterComponent from '@components/common/FooterComponent'
 
 const inter = Poppins({ subsets: ['latin'], weight: '500' })
 

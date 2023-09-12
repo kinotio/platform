@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faDiscord, faSlack, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-import SubscribeForm from '@/components/shared/SubscribeFormComponent'
+import SubscribeForm from '@components/shared/SubscribeFormComponent'
 
 const links = [
   { name: 'Home', href: '#' },

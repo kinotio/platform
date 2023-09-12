@@ -23,7 +23,7 @@ const HeaderComponent = () => {
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
-          <a href='#' className='m-1.5 p-1.5 flex'>
+          <a href='/' className='m-1.5 p-1.5 flex'>
             <span className='sr-only'>Kinotio</span>
             <Image
               className='h-8 w-auto pr-2'

@@ -56,7 +56,7 @@ const FooterComponent = () => {
         <hr className='my-6 border-gray-200 md:my-8 dark:border-gray-700' />
 
         <div className='flex items-center justify-between'>
-          <Link href='#'>
+          <Link href='/'>
             <Image
               className='h-8 w-auto pr-2'
               src='/assets/images/kinotio-logo-dark.png'

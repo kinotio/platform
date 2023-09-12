@@ -20,10 +20,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@components": ["./components/*"],
-      "@hooks": ["./hooks/*"],
-      "@styles": ["./styles/*"],
-      "@lib": ["./lib/*"]
+      "@components/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@styles/*": ["./styles/*"],
+      "@lib/*": ["./lib/*"]
     },
     "typeRoots": ["types/**/*.d.ts", "node_modules/@types"]
   },

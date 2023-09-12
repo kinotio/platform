@@ -2,26 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Garet Book";
-  src: url("/assets/fonts/garet/Garet-Book.ttf");
-}
-
-@font-face {
-  font-family: "Garet Heavy";
-  src: url("/assets/fonts/garet/Garet-Heavy.ttf");
-}
-
-.font-garet-book {
-  font-family: "Garet Book", sans-serif;
-}
-
-.font-garet-heavy {
-  font-family: "Garet Heavy", sans-serif;
-}
+@import "main.css";
+@import "font-face.css";

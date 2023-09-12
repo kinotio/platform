@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.font-garet-book {
+  font-family: "Garet Book", sans-serif;
+}
+
+.font-garet-heavy {
+  font-family: "Garet Heavy", sans-serif;
+}
+
+.Toastify__toast-container {
+  top: 0 !important;
+  width: 100vw !important;
+  text-align: center !important;
+}
+
+.Toastify__toast-body > div {
+  font-family: "Poppins" !important;
+}
+
+.Toastify__close-button {
+  margin-top: 14px !important;
+}

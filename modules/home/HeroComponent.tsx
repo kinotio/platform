@@ -5,7 +5,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const HeroComponent = () => {
   return (
-    <section className='px-6 pb-16 pt-16 mx-auto'>
+    <section className='px-6 pb-16 pt-16'>
       <div className='items-center lg:flex'>
         <div className='w-full lg:w-1/2'>
           <div className='lg:max-w-lg'>

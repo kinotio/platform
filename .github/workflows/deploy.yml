@@ -17,6 +17,8 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+  NEXT_PUBLIC_IPINFO_URL: ${{ secrets.NEXT_PUBLIC_IPINFO_URL }}
+  NEXT_PUBLIC_IPINFO_TOKEN: ${{ secrets.NEXT_PUBLIC_IPINFO_TOKEN }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

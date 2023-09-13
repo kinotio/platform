@@ -14,7 +14,12 @@ const SubscribeForm = () => {
   const [isLoding, setIsLoading] = useState<boolean>(false)
 
   const handleSaveSubscriber = async () => {
-    if (!validateEmail({ email })) return
+    if (!validateEmail({ email })) {
+      toast('Please use a valid email address', {
+        type: 'error'
+      })
+      return
+    }
 
     setIsLoading(true)
 
@@ -25,6 +30,7 @@ const SubscribeForm = () => {
         type: 'error'
       })
       setIsLoading(false)
+      return
     }
 
     toast('Thanks for subscribing to our newsletter, happy to have you with us', {

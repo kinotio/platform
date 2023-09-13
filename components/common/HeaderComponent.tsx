@@ -57,7 +57,7 @@ const HeaderComponent = () => {
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <Link
-            href='#'
+            href='/join'
             className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center'
           >
             Join us
@@ -103,7 +103,7 @@ const HeaderComponent = () => {
               </div>
               <div className='py-6'>
                 <Link
-                  href='#'
+                  href='/join'
                   className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center justify-center'
                 >
                   Join us

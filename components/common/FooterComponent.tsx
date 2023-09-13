@@ -67,19 +67,31 @@ const FooterComponent = () => {
           </Link>
 
           <div className='flex mx-2'>
-            <Link href='#' className='mx-2 text-black' aria-label='GitHub'>
+            <Link href='https://github.com/kinotio' className='mx-2 text-black' aria-label='GitHub'>
               <FontAwesomeIcon icon={faGithub} style={{ fontSize: 20 }} />
             </Link>
 
-            <Link href='#' className='mx-2 text-black' aria-label='Discord'>
+            <Link
+              href='https://discord.gg/GrW4P9un'
+              className='mx-2 text-black'
+              aria-label='Discord'
+            >
               <FontAwesomeIcon icon={faDiscord} style={{ fontSize: 20 }} />
             </Link>
 
-            <Link href='#' className='mx-2 text-black' aria-label='Slack'>
+            <Link
+              href='https://join.slack.com/t/kinotio/shared_invite/zt-22iyj7thg-B3bFQMmn_6u76oLVgJiL_Q'
+              className='mx-2 text-black'
+              aria-label='Slack'
+            >
               <FontAwesomeIcon icon={faSlack} style={{ fontSize: 20 }} />
             </Link>
 
-            <Link href='#' className='mx-2 text-black' aria-label='LinkedIn'>
+            <Link
+              href='https://www.linkedin.com/company/kinotio'
+              className='mx-2 text-black'
+              aria-label='LinkedIn'
+            >
               <FontAwesomeIcon icon={faLinkedinIn} style={{ fontSize: 20 }} />
             </Link>
           </div>

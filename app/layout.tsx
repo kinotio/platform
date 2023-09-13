@@ -13,6 +13,7 @@ config.autoAddCss = false
 
 import HeaderComponent from '@components/common/HeaderComponent'
 import FooterComponent from '@components/common/FooterComponent'
+import CookieComponent from '@/components/ui/CookieComponent'
 
 const inter = Poppins({ subsets: ['latin'], weight: '500' })
 
@@ -38,6 +39,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <HeaderComponent />
         {children}
         <FooterComponent />
+
+        <section>
+          <CookieComponent />
+        </section>
       </body>
     </html>
   )

@@ -1,11 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { isEmpty } from 'lodash'
 import { PhoneInput } from 'react-international-phone'
-import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector'
-
-import useUserCountryCode from '@hooks/useUserCountryCode'
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
 
 const JoinFormComponent = () => {
   const [firstName, setFirstName] = useState<string>('')
@@ -15,8 +12,6 @@ const JoinFormComponent = () => {
   const [country, setCountry] = useState<string>('')
   const [region, setRegion] = useState<string>('')
   const [postalCode, setPostalCode] = useState<string>('')
-
-  const countryCode = useUserCountryCode()
 
   const handleSubmitForm = (event: any) => {
     event.preventDefault()
@@ -107,19 +102,17 @@ const JoinFormComponent = () => {
               />
             </div>
 
-            {!isEmpty(countryCode) ? (
-              <div className='w-full'>
-                <label htmlFor='phone' className='block mb-2 text-sm font-medium text-gray-900'>
-                  Phone
-                </label>
-                <PhoneInput
-                  defaultCountry={countryCode}
-                  placeholder='Phone'
-                  value={phone}
-                  onChange={(val) => setPhone(val)}
-                />
-              </div>
-            ) : null}
+            <div className='w-full'>
+              <label htmlFor='phone' className='block mb-2 text-sm font-medium text-gray-900'>
+                Phone
+              </label>
+              <PhoneInput
+                defaultCountry='us'
+                placeholder='Phone'
+                value={phone}
+                onChange={(val) => setPhone(val)}
+              />
+            </div>
 
             <div className='w-full'>
               <label htmlFor='postalCode' className='block mb-2 text-sm font-medium text-gray-900'>

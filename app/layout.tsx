@@ -2,6 +2,7 @@ import '@styles/globals.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'react-international-phone/style.css'
+import 'react-datepicker/dist/react-datepicker.css'
 
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
@@ -26,7 +27,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang='en'>
       <body className={inter.className}>
         <section>
-          <ToastContainer hideProgressBar={true} icon={false} position='top-center' />
+          <ToastContainer
+            hideProgressBar={true}
+            icon={false}
+            position='top-center'
+            theme='colored'
+          />
         </section>
 
         <HeaderComponent />

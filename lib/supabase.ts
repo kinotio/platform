@@ -15,6 +15,36 @@ export interface Database {
           email?: string
         }
       }
+      joiners: {
+        Row: {
+          id: number
+          first_name: string
+          last_name: string
+          email: string
+          birthdate: string
+          phone: string
+          country: string
+          region: string
+          postal_code: string
+          position: string
+          github_username: string
+          gitlab_username: string
+        }
+        Insert: {
+          id?: number
+          first_name?: string
+          last_name?: string
+          email?: string
+          birthdate?: string
+          phone?: string
+          country?: string
+          region?: string
+          postal_code?: string
+          position?: string
+          github_username?: string
+          gitlab_username?: string
+        }
+      }
     }
     Views: {
       [_ in never]: never

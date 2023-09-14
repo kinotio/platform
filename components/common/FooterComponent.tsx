@@ -7,9 +7,9 @@ import SubscribeForm from '@components/shared/SubscribeFormComponent'
 
 const links = [
   { name: 'Home', href: '/' },
-  { name: 'About us', href: '#' },
-  { name: 'Our Philosophy', href: '/philosophy' },
-  { name: 'Cookie Policy', href: '/cookie' }
+  { name: 'About us', href: '/about-us' },
+  { name: 'Our Philosophy', href: '/our-philosophy' },
+  { name: 'Cookie Policy', href: '/cookie-policy' }
 ]
 
 const navigation = [

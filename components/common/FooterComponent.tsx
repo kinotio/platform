@@ -6,9 +6,10 @@ import { faGithub, faDiscord, faSlack, faLinkedinIn } from '@fortawesome/free-br
 import SubscribeForm from '@components/shared/SubscribeFormComponent'
 
 const links = [
-  { name: 'Home', href: '#' },
+  { name: 'Home', href: '/' },
   { name: 'About us', href: '#' },
-  { name: 'Our Philosophy', href: '#' }
+  { name: 'Our Philosophy', href: '/philosophy' },
+  { name: 'Cookie Policy', href: '/cookie' }
 ]
 
 const navigation = [

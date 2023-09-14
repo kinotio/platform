@@ -5,7 +5,7 @@ const Page = () => {
     <main className='container mx-auto'>
       <section className='bg-white'>
         <div className='py-8 px-4 mx-auto max-w-2xl lg:py-16'>
-          <h2 className='mb-4 text-xl font-bold text-gray-900 pb-1'>Our Cookie Policy</h2>
+          <h2 className='mb-4 text-xl font-bold text-gray-900 pb-1'>Cookie Policy</h2>
 
           <span className='px-3 py-1 mb-4 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500'>
             Sep 13, 2023

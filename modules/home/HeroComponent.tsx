@@ -20,7 +20,7 @@ const HeroComponent = () => {
 
             <Link
               className='px-4 py-2 mt-6 text-sm font-semibold leading-6 text-white bg-black rounded-full flex justify-center items-center w-28'
-              href='/join'
+              href='/join-us'
             >
               Join us
               <FontAwesomeIcon className='ml-2' icon={faChevronRight} style={{ fontSize: 16 }} />

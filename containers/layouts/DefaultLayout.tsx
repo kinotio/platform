@@ -8,6 +8,7 @@ import { Poppins } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 
 import TransitionLayout from '@containers/layouts/TransitionLayout'
+import CookieContainer from '@containers/common/CookieContainer'
 
 config.autoAddCss = false
 
@@ -17,16 +18,9 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <section>
-          <ToastContainer
-            hideProgressBar={true}
-            icon={false}
-            position='top-center'
-            theme='colored'
-          />
-        </section>
-
+        <ToastContainer hideProgressBar={true} icon={false} position='top-center' theme='colored' />
         <TransitionLayout>{children}</TransitionLayout>
+        <CookieContainer />
       </body>
     </html>
   )

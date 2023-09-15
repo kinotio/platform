@@ -25,7 +25,8 @@
       "@styles/*": ["./styles/*"],
       "@modules/*": ["./modules/*"],
       "@lib/*": ["./lib/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@containers/*": ["./containers/*"]
     },
     "typeRoots": ["types/**/*.d.ts", "node_modules/@types"]
   },

@@ -1,10 +1,10 @@
-import HeroComponent from '@/modules/home/HeroComponent'
+import HeroComponent from '@modules/home/HeroComponent'
 
 const Page = () => {
   return (
-    <main className='container mx-auto'>
+    <section>
       <HeroComponent />
-    </main>
+    </section>
   )
 }
 

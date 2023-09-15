@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { getCookie, setCookie } from 'cookies-next'
+import { v4 as uuidv4 } from 'uuid'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -11,10 +12,10 @@ const CookieComponent = () => {
 
   const handleHideCookieBanner = () => {
     setShow(false)
-    setCookie('opened_cookie', Math.floor(Math.random() * Date.now()).toString(36))
+    setCookie('opened_cookie', uuidv4())
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (getCookie('opened_cookie')) {
       setShow(false)
     }
@@ -28,10 +29,10 @@ const CookieComponent = () => {
             <div className='flex items-start md:items-center gap-x-2'>
               <p className='text-white'>
                 We use cookies to enhance your user experience. By continuing to visit this site you
-                agree to{' '}
+                agree to
                 <a
-                  href='/cookie'
-                  className='underline transition-colors duration-200 hover:text-black'
+                  href='/cookie-policy'
+                  className='underline transition-colors duration-200 hover:text-black pl-1'
                 >
                   our use of cookies
                 </a>

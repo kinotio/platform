@@ -3,27 +3,27 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faDiscord, faSlack, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-import SubscribeForm from '@components/shared/SubscribeFormComponent'
+import SubscribeFormComponent from '@components/modules/SubscribeFormComponent'
 
 const links = [
   { name: 'Home', href: '/' },
   { name: 'About us', href: '/about-us' },
+  { name: 'Contact us', href: '/contact-us' },
   { name: 'Our Philosophy', href: '/our-philosophy' },
   { name: 'Cookie Policy', href: '/cookie-policy' }
 ]
 
 const navigation = [
   { name: 'Product', href: '#' },
-  { name: 'Developer', href: '#' },
-  { name: 'Marketplace', href: '#' }
+  { name: 'Developer', href: '#' }
 ]
 
 const FooterComponent = () => {
   return (
-    <footer className='bg-white relative inset-x-0 bottom-0 z-30'>
+    <footer className='bg-white relative inset-x-0 bottom-0'>
       <div className='container px-6 py-12 mx-auto'>
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4'>
-          <SubscribeForm />
+          <SubscribeFormComponent />
 
           <div>
             <div className='flex flex-col items-start mt-5 space-y-2'>

@@ -7,11 +7,11 @@ import { toast } from 'react-toastify'
 import { validateEmail } from '@utils/common'
 import ButtonLoaderIcon from '@components/icons/ButtonLoaderIcon'
 
-const SubscribeForm = () => {
+const SubscribeFormComponent = () => {
   const supabase = createClientComponentClient<SupabaseDatabase>()
 
   const [email, setEmail] = useState<string>('')
-  const [isLoding, setIsLoading] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const handleSaveSubscriber = async () => {
     if (!validateEmail({ email })) {
@@ -64,11 +64,11 @@ const SubscribeForm = () => {
           className='w-full h-11 px-6 py-2.5 text-sm font-medium tracking-wider text-white md:w-auto md:mx-4 bg-black rounded-full flex justify-center items-center'
           onClick={handleSaveSubscriber}
         >
-          {isLoding ? <ButtonLoaderIcon /> : 'Subscribe'}
+          {isLoading ? <ButtonLoaderIcon /> : 'Subscribe'}
         </button>
       </div>
     </div>
   )
 }
 
-export default SubscribeForm
+export default SubscribeFormComponent

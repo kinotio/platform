@@ -3,22 +3,20 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { Dialog } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const navigation = [
   { name: 'Product', href: '#' },
-  { name: 'Developer', href: '#' },
-  { name: 'Marketplace', href: '#' }
+  { name: 'Developer', href: '#' }
 ]
 
 const HeaderComponent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className='bg-white relative inset-x-0 top-0 z-30'>
+    <header className='bg-white relative inset-x-0 top-0'>
       <nav
         className='container flex items-center justify-between px-6 py-6 mx-auto'
         aria-label='Global'
@@ -45,25 +43,29 @@ const HeaderComponent = () => {
             <FontAwesomeIcon icon={faBars} style={{ fontSize: 32 }} />
           </button>
         </div>
-        <div className='hidden lg:flex lg:gap-x-12'>
-          {navigation.map((item) => (
+
+        <div className='hidden lg:flex lg:flex-1 lg:justify-end items-center'>
+          <div className='flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0 lg:px-2'>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className='text-sm font-semibold leading-6 text-gray-900 lg:px-4'
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className='flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0 lg:px-2'>
             <Link
-              key={item.name}
-              href={item.href}
-              className='text-sm font-semibold leading-6 text-gray-900'
+              href='/join-us'
+              className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center'
             >
-              {item.name}
+              Join us
+              <FontAwesomeIcon className='ml-2' icon={faChevronRight} style={{ fontSize: 16 }} />
             </Link>
-          ))}
-        </div>
-        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <Link
-            href='/join-us'
-            className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center'
-          >
-            Join us
-            <FontAwesomeIcon className='ml-2' icon={faChevronRight} style={{ fontSize: 16 }} />
-          </Link>
+          </div>
         </div>
       </nav>
       <Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>

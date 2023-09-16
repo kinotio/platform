@@ -1,4 +1,4 @@
-import HeroComponent from '@modules/home/HeroComponent'
+import HeroComponent from '@/components/modules/HeroComponent'
 
 const Page = () => {
   return (

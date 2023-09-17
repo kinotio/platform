@@ -17,9 +17,12 @@ const CookieContainer = () => {
   useEffect(() => {
     if (getCookie('closed_cookie')) {
       setShowCookieConsent(false)
-    } else {
-      setTimeout(() => setShowCookieConsent(true), 0)
+      return
     }
+
+    const timeout = setTimeout(() => setShowCookieConsent(true), 0)
+
+    return clearTimeout(timeout)
   }, [])
 
   return (

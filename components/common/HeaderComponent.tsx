@@ -16,7 +16,7 @@ const HeaderComponent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className='bg-white relative inset-x-0 top-0'>
+    <header className='bg-white sticky inset-x-0 top-0'>
       <nav
         className='container flex items-center justify-between px-6 py-6 mx-auto'
         aria-label='Global'

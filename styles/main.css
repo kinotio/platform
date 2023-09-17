@@ -66,3 +66,12 @@ select {
 .react-datepicker-wrapper {
   width: 100%;
 }
+
+.loader-full {
+  width: 85vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -81,8 +81,7 @@ const Page = () => {
 
         <div className='pt-8'>
           <h1 className='text-xl font-semibold text-gray-800 capitalize'>
-            Thank you for being a part of this community. Welcome to a world of endless
-            possibilities.
+            Thank you for being a part of this community.
           </h1>
         </div>
       </div>

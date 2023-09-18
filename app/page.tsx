@@ -1,10 +1,12 @@
+import FeatureComponent from '@/components/modules/FeatureComponent'
 import HeroComponent from '@/components/modules/HeroComponent'
 
 const Page = () => {
   return (
-    <section>
+    <main className='container mx-auto'>
       <HeroComponent />
-    </section>
+      <FeatureComponent />
+    </main>
   )
 }
 

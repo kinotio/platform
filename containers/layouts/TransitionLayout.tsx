@@ -10,7 +10,7 @@ const TransitionLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <AnimatePresence initial={false}>
       <HeaderComponent key={uuidv4()} />
-      <main className='container mx-auto'>{children}</main>
+      {children}
       <FooterComponent key={uuidv4()} />
     </AnimatePresence>
   )

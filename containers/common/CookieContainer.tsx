@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { getCookie, setCookie } from 'cookies-next'
 
@@ -26,11 +26,11 @@ const CookieContainer = () => {
   }, [])
 
   return (
-    <section>
+    <>
       {showCookieConsent ? (
         <CookieComponent handleHideCookieBanner={handleHideCookieBanner} />
       ) : null}
-    </section>
+    </>
   )
 }
 

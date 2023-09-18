@@ -5,18 +5,7 @@ import { faGithub, faDiscord, faSlack, faLinkedinIn } from '@fortawesome/free-br
 
 import SubscribeFormComponent from '@components/modules/SubscribeFormComponent'
 
-const links = [
-  { name: 'Home', href: '/' },
-  { name: 'About us', href: '/about-us' },
-  { name: 'Contact us', href: '/contact-us' },
-  { name: 'Our Philosophy', href: '/our-philosophy' },
-  { name: 'Cookie Policy', href: '/cookie-policy' }
-]
-
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Developer', href: '#' }
-]
+import { links, navigation } from '@mocks/data'
 
 const FooterComponent = () => {
   return (

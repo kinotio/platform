@@ -1,6 +1,6 @@
 const Page = () => {
   return (
-    <section className='bg-white'>
+    <main className='container mx-auto bg-white'>
       <div className='container px-6 py-10 mx-auto'>
         <h1 className='text-2xl font-semibold text-gray-800 capitalize lg:text-3xl'>About us</h1>
 
@@ -85,7 +85,7 @@ const Page = () => {
           </h1>
         </div>
       </div>
-    </section>
+    </main>
   )
 }
 

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Page = () => {
   return (
-    <section className='bg-white'>
+    <main className='container mx-auto bg-white'>
       <div className='py-8 px-4 mx-auto max-w-2xl lg:py-16'>
         <h2 className='mb-4 text-xl font-bold text-gray-900 pb-1'>Cookie Policy</h2>
 
@@ -102,7 +102,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   )
 }
 

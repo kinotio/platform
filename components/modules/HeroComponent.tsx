@@ -11,7 +11,7 @@ const HeroComponent = () => {
           <div className='lg:max-w-lg'>
             <h1 className='text-3xl font-semibold text-gray-800 lg:text-4xl'>
               Welcome to a world of endless
-              <span className='text-blue-400 font-garet-heavy pl-1'>possibilities</span>
+              <span className='text-blue-400 font-garet-heavy pl-2'>possibilities</span>
             </h1>
 
             <p className='mt-3 text-gray-600'>

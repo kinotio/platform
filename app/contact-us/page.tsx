@@ -51,7 +51,7 @@ const Page = () => {
   }
 
   return (
-    <section className='bg-white'>
+    <main className='container mx-auto bg-white'>
       <div className='py-8 px-4 mx-auto max-w-2xl lg:py-16'>
         <h2 className='mb-4 text-xl font-bold text-gray-900 pb-6'>
           You can contact us with sending us a message here
@@ -125,7 +125,7 @@ const Page = () => {
           </button>
         </form>
       </div>
-    </section>
+    </main>
   )
 }
 

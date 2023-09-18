@@ -2,7 +2,7 @@ import '@styles/globals.css'
 
 import type { Metadata } from 'next'
 
-import DefaultLayout from '@/containers/layouts/DefaultLayout'
+import DefaultLayout from '@containers/layouts/DefaultLayout'
 
 export const metadata: Metadata = {
   title: 'Kinotio',

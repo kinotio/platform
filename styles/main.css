@@ -79,3 +79,23 @@ select {
   align-items: center;
   justify-content: center;
 }
+
+.cl-formButtonPrimary {
+  background-color: #5fa5f9;
+  padding: 15px 0px;
+  border-radius: 50px;
+}
+
+.cl-formButtonPrimary:hover {
+  background-color: #338cf9;
+  padding: 15px 0px;
+  border-radius: 50px;
+}
+
+.cl-footerActionLink {
+  color: #5fa5f9;
+}
+
+.cl-footerActionLink:hover {
+  color: #338cf9;
+}

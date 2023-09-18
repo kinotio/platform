@@ -8,9 +8,11 @@ import { Poppins } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 import { ClerkLoading, ClerkProvider, ClerkLoaded } from '@clerk/nextjs'
 
-import TransitionLayout from '@containers/layouts/TransitionLayout'
+import HeaderComponent from '@components/common/HeaderComponent'
+import FooterComponent from '@components/common/FooterComponent'
+import LoaderComponent from '@components/common/LoaderComponent'
+
 import CookieContainer from '@containers/common/CookieContainer'
-import LoaderComponent from '@/components/common/LoaderComponent'
 
 config.autoAddCss = false
 
@@ -32,7 +34,11 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
               position='top-center'
               theme='colored'
             />
-            <TransitionLayout>{children}</TransitionLayout>
+
+            <HeaderComponent />
+            {children}
+            <FooterComponent />
+
             <CookieContainer />
           </ClerkLoaded>
         </body>

@@ -11,6 +11,7 @@ export const links = [
 export const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Developer', href: '#' },
+  { name: 'Event', href: '#' },
   { name: 'Join us', href: '/join-us' }
 ]
 

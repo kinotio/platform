@@ -9,9 +9,10 @@ export const links = [
 ]
 
 export const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Developer', href: '#' },
-  { name: 'Event', href: '#' },
+  { name: 'Products', href: '#' },
+  { name: 'Packages', href: '#' },
+  { name: 'Developers', href: '#' },
+  { name: 'Events', href: '#' },
   { name: 'Join us', href: '/join-us' }
 ]
 

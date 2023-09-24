@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-toastify'
 
-import { validateEmail } from '@utils/common'
+import { validateEmail } from '@/utils/validator'
 import ButtonLoaderIcon from '@components/icons/ButtonLoaderIcon'
 
 const SubscribeFormComponent = () => {

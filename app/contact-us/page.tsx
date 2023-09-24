@@ -4,8 +4,11 @@ import { useState } from 'react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-toastify'
 
-import { validateEmail } from '@utils/common'
-import ButtonLoaderIcon from '@components/icons/ButtonLoaderIcon'
+import { validateEmail } from '@/utils/validator'
+
+import Input from '@components/ui/form/Input'
+import Button from '@/components/ui/form/Button'
+import TextArea from '@/components/ui/form/TextArea'
 
 const Page = () => {
   const supabase = createClientComponentClient<SupabaseDatabase>()
@@ -58,71 +61,46 @@ const Page = () => {
         </h2>
         <form onSubmit={handleSubmitForm}>
           <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
-            <div className='w-full'>
-              <label htmlFor='firstName' className='block mb-2 text-sm font-medium text-gray-900'>
-                First Name
-              </label>
-              <input
-                type='text'
-                name='firstName'
-                id='firstName'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='First Name'
-                onChange={(event) => setFirstName(event.target.value)}
-                value={firstName}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='lastName' className='block mb-2 text-sm font-medium text-gray-900'>
-                Last Name
-              </label>
-              <input
-                type='text'
-                name='lastName'
-                id='lastName'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Last Name'
-                onChange={(event) => setLastName(event.target.value)}
-                value={lastName}
-              />
-            </div>
-            <div className='sm:col-span-2'>
-              <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900'>
-                Email
-              </label>
-              <input
-                type='text'
-                name='email'
-                id='email'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Email Address'
-                onChange={(event) => setEmail(event.target.value)}
-                value={email}
-              />
-            </div>
-
-            <div className='sm:col-span-2'>
-              <label htmlFor='message' className='block mb-2 text-sm font-medium text-gray-900'>
-                Message
-              </label>
-              <textarea
-                name='message'
-                id='message'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Message'
-                onChange={(event) => setMessage(event.target.value)}
-                value={message}
-                rows={10}
-              />
-            </div>
+            <Input
+              label='First Name'
+              name='firstName'
+              value={firstName}
+              className='w-full'
+              placeholder='First Name'
+              onChange={(event) => setFirstName(event.target.value)}
+            />
+            <Input
+              label='Last Name'
+              name='lastName'
+              value={lastName}
+              className='w-full'
+              placeholder='Last Name'
+              onChange={(event) => setLastName(event.target.value)}
+            />
+            <Input
+              label='Email'
+              name='email'
+              value={email}
+              className='sm:col-span-2'
+              placeholder='Email Address'
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <TextArea
+              label='Message'
+              name='message'
+              placeholder='Message'
+              className='sm:col-span-2'
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+            />
           </div>
 
-          <button
+          <Button
+            label='Submit'
             type='submit'
-            className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 focus:ring-4 focus:ring-primary-200 hover:bg-primary-800 bg-black rounded-full'
-          >
-            {isLoading ? <ButtonLoaderIcon /> : 'Submit'}
-          </button>
+            className='bg-black text-white'
+            loading={isLoading}
+          />
         </form>
       </div>
     </main>

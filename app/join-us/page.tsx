@@ -5,7 +5,7 @@ import moment from 'moment'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-toastify'
 
-import { validateEmail } from '@utils/common'
+import { validateEmail, validatePostalCode } from '@/utils/validator'
 
 import Input from '@components/ui/form/Input'
 import Button from '@/components/ui/form/Button'
@@ -37,6 +37,13 @@ const Page = () => {
 
     if (!validateEmail({ email })) {
       toast('Please use a valid email address', {
+        type: 'error'
+      })
+      return
+    }
+
+    if (!validatePostalCode({ postalCode, countryCode: country })) {
+      toast('Please use a valid postal code', {
         type: 'error'
       })
       return

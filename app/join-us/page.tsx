@@ -2,14 +2,16 @@
 
 import { useState } from 'react'
 import moment from 'moment'
-import { PhoneInput } from 'react-international-phone'
-import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
-import DatePicker from 'react-datepicker'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-toastify'
 
 import { validateEmail } from '@utils/common'
-import ButtonLoaderIcon from '@components/icons/ButtonLoaderIcon'
+
+import Input from '@components/ui/form/Input'
+import Button from '@/components/ui/form/Button'
+import DatePicker from '@components/ui/form/DatePicker'
+import PhoneInput, { PhoneInputCountryType } from '@components/ui/form/PhoneInput'
+import CountryRegionDropdown from '@components/ui/custom/CountryRegionDropdown'
 
 const Page = () => {
   const supabase = createClientComponentClient<SupabaseDatabase>()
@@ -18,6 +20,7 @@ const Page = () => {
   const [lastName, setLastName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
+  const [phoneCountry, setPhoneCountry] = useState<string>('')
   const [country, setCountry] = useState<string>('')
   const [region, setRegion] = useState<string>('')
   const [postalCode, setPostalCode] = useState<string>('')
@@ -48,6 +51,7 @@ const Page = () => {
       last_name: lastName,
       email,
       phone,
+      phone_country: phoneCountry,
       country,
       region,
       postal_code: postalCode,
@@ -79,127 +83,75 @@ const Page = () => {
         </h2>
         <form onSubmit={handleSubmitForm}>
           <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
-            <div className='w-full'>
-              <label htmlFor='firstName' className='block mb-2 text-sm font-medium text-gray-900'>
-                First Name
-              </label>
-              <input
-                type='text'
-                name='firstName'
-                id='firstName'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='First Name'
-                onChange={(event) => setFirstName(event.target.value)}
-                value={firstName}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='lastName' className='block mb-2 text-sm font-medium text-gray-900'>
-                Last Name
-              </label>
-              <input
-                type='text'
-                name='lastName'
-                id='lastName'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Last Name'
-                onChange={(event) => setLastName(event.target.value)}
-                value={lastName}
-              />
-            </div>
-            <div className='sm:col-span-2'>
-              <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900'>
-                Email
-              </label>
-              <input
-                type='text'
-                name='email'
-                id='email'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Email Address'
-                onChange={(event) => setEmail(event.target.value)}
-                value={email}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900'>
-                Birthdate
-              </label>
-              <DatePicker
-                selected={birthdate}
-                onChange={(val: Date) => setBirthdate(val)}
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900'>
-                Position
-              </label>
-              <input
-                type='text'
-                name='position'
-                id='position'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Ex: Software Engineer, Product Owner, ...'
-                onChange={(event) => setPosition(event.target.value)}
-                value={position}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='country' className='block mb-2 text-sm font-medium text-gray-900'>
-                Country
-              </label>
-              <div className='select-wrapper'>
-                <CountryDropdown
-                  id='country'
-                  name='country'
-                  value={country}
-                  onChange={(val) => setCountry(val)}
-                  classes='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                />
-              </div>
-            </div>
-            <div className='w-full'>
-              <label htmlFor='region' className='block mb-2 text-sm font-medium text-gray-900'>
-                Region
-              </label>
-              <div className='select-wrapper'>
-                <RegionDropdown
-                  id='region'
-                  name='region'
-                  disableWhenEmpty={true}
-                  country={country}
-                  value={region}
-                  onChange={(val) => setRegion(val)}
-                  classes='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                />
-              </div>
-            </div>
-            <div className='w-full'>
-              <label htmlFor='phone' className='block mb-2 text-sm font-medium text-gray-900'>
-                Phone
-              </label>
-              <PhoneInput
-                defaultCountry='us'
-                placeholder='Phone'
-                value={phone}
-                onChange={(val) => setPhone(val)}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='postalCode' className='block mb-2 text-sm font-medium text-gray-900'>
-                Postal Code
-              </label>
-              <input
-                type='number'
-                name='postalCode'
-                id='postalCode'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='Postal Code'
-                onChange={(event) => setPostalCode(event.target.value)}
-                value={postalCode}
-              />
-            </div>
+            <Input
+              label='First Name'
+              name='firstName'
+              value={firstName}
+              className='w-full'
+              placeholder='First Name'
+              onChange={(event) => setFirstName(event.target.value)}
+            />
+            <Input
+              label='Last Name'
+              name='lastName'
+              value={lastName}
+              className='w-full'
+              placeholder='Last Name'
+              onChange={(event) => setLastName(event.target.value)}
+            />
+            <Input
+              label='Email'
+              name='email'
+              value={email}
+              className='sm:col-span-2'
+              placeholder='Email Address'
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <DatePicker
+              label='Birthdate'
+              name='birthdate'
+              value={birthdate}
+              className='w-full'
+              onChange={(val: Date) => setBirthdate(val)}
+            />
+            <Input
+              label='position'
+              name='position'
+              value={position}
+              className='w-full'
+              placeholder='Ex: Software Engineer, Product Owner, ...'
+              onChange={(event) => setPosition(event.target.value)}
+            />
+            <CountryRegionDropdown
+              className='w-full'
+              countryLabel='Country'
+              countryName='country'
+              countryValue={country}
+              countryOnChange={(val) => setCountry(val)}
+              regionLabel='Region'
+              regionName='region'
+              regionValue={region}
+              regionOnChange={(val) => setRegion(val)}
+            />
+            <PhoneInput
+              className='w-full'
+              label='Phone'
+              name='phone'
+              value={phone}
+              placeholder='Phone'
+              onChange={(phone: string, country: PhoneInputCountryType) => {
+                setPhone(phone)
+                setPhoneCountry(country)
+              }}
+            />
+            <Input
+              label='Postal Code'
+              name='postalCode'
+              value={postalCode}
+              className='w-full'
+              placeholder='Postal Code'
+              onChange={(event) => setPostalCode(event.target.value)}
+            />
           </div>
 
           <hr className='my-12 border-gray-700' />
@@ -207,42 +159,30 @@ const Page = () => {
           <h2 className='text-xl font-bold text-gray-900 pb-6'>Community links (optional)</h2>
 
           <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
-            <div className='w-full'>
-              <label htmlFor='github' className='block mb-2 text-sm font-medium text-gray-900'>
-                GitHub
-              </label>
-              <input
-                type='text'
-                name='github'
-                id='github'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='@your_username'
-                onChange={(event) => setGithub(event.target.value)}
-                value={github}
-              />
-            </div>
-            <div className='w-full'>
-              <label htmlFor='gitlab' className='block mb-2 text-sm font-medium text-gray-900'>
-                GitLab
-              </label>
-              <input
-                type='text'
-                name='gitlab'
-                id='gitlab'
-                className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5'
-                placeholder='@your_username'
-                onChange={(event) => setGitlab(event.target.value)}
-                value={gitlab}
-              />
-            </div>
+            <Input
+              label='GitHub'
+              name='github'
+              value={github}
+              className='w-full'
+              placeholder='@your_username'
+              onChange={(event) => setGithub(event.target.value)}
+            />
+            <Input
+              label='GitLab'
+              name='gitlab'
+              value={gitlab}
+              className='w-full'
+              placeholder='@your_username'
+              onChange={(event) => setGitlab(event.target.value)}
+            />
           </div>
 
-          <button
+          <Button
+            label='Submit'
             type='submit'
-            className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 focus:ring-4 focus:ring-primary-200 hover:bg-primary-800 bg-black rounded-full'
-          >
-            {isLoading ? <ButtonLoaderIcon /> : 'Submit'}
-          </button>
+            className='bg-black text-white'
+            loading={isLoading}
+          />
         </form>
       </div>
     </main>

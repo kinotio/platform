@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-toastify'
+import classNames from 'classnames'
 
 import { validateEmail } from '@/utils/validator'
 import ButtonLoaderIcon from '@components/icons/ButtonLoaderIcon'
@@ -12,6 +13,11 @@ const SubscribeFormComponent = () => {
 
   const [email, setEmail] = useState<string>('')
   const [isLoading, setIsLoading] = useState<boolean>(false)
+
+  const inputClasses = classNames(
+    'px-4 py-2 text-gray-700 bg-white border rounded-full border-gray-300',
+    { 'border-red-500': email && !validateEmail({ email }) }
+  )
 
   const handleSaveSubscriber = async () => {
     if (!validateEmail({ email })) {
@@ -50,7 +56,7 @@ const SubscribeFormComponent = () => {
           <input
             id='email'
             type='text'
-            className='px-4 py-2 text-gray-700 bg-white border rounded-full'
+            className={inputClasses}
             placeholder='Email Address'
             onChange={(event) => setEmail(event.target.value)}
           />

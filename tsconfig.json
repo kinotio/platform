@@ -28,7 +28,8 @@
       "@utils/*": ["./utils/*"],
       "@containers/*": ["./containers/*"],
       "@mocks/*": ["./mocks/*"],
-      "@stores/*": ["./stores/*"]
+      "@stores/*": ["./stores/*"],
+      "@pages/*": ["./pages/*"]
     },
     "typeRoots": ["types/**/*.d.ts", "node_modules/@types"]
   },

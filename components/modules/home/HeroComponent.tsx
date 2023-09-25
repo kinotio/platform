@@ -14,7 +14,7 @@ const HeroComponent = () => {
               <span className='text-blue-400 font-garet-heavy pl-2'>possibilities</span>
             </h1>
 
-            <p className='mt-3 text-gray-600'>
+            <p className='mt-3 text-gray-600 text-sm'>
               Collaborative digital space where software, applications, or projects are developed
               and shared openly.
             </p>

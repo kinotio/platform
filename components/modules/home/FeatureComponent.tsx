@@ -16,7 +16,7 @@ const FeatureComponent = () => {
           <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
             {features.map((feature) => (
               <div key={feature.name} className='relative pl-16'>
-                <dt className='text-base font-semibold leading-7 text-gray-900'>
+                <dt className='text-md font-semibold leading-7 text-gray-900'>
                   <div className='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400'>
                     <FontAwesomeIcon
                       icon={feature.icon}
@@ -29,8 +29,8 @@ const FeatureComponent = () => {
                 {feature.features?.map((feat) => (
                   <>
                     <dd key={feat.name} className='mt-2 leading-7 my-4'>
-                      <span className='font-bold'>{feat.name}:</span>{' '}
-                      <span className='text-gray-600'>{feat.value}</span>
+                      <span className='font-bold text-sm'>{feat.name}:</span>{' '}
+                      <span className='text-gray-600 text-sm'>{feat.value}</span>
                     </dd>
                   </>
                 ))}

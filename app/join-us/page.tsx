@@ -12,6 +12,7 @@ import Button from '@/components/ui/form/Button'
 import DatePicker from '@components/ui/form/DatePicker'
 import PhoneInput, { PhoneInputCountryType } from '@components/ui/form/PhoneInput'
 import CountryRegionDropdown from '@components/ui/custom/CountryRegionDropdown'
+import Line from '@components/ui/Line'
 
 const Page = () => {
   const supabase = createClientComponentClient<SupabaseDatabase>()
@@ -97,6 +98,7 @@ const Page = () => {
               className='w-full'
               placeholder='First Name'
               onChange={(event) => setFirstName(event.target.value)}
+              required={true}
             />
             <Input
               label='Last Name'
@@ -161,7 +163,7 @@ const Page = () => {
             />
           </div>
 
-          <hr className='my-12 border-gray-700' />
+          <Line />
 
           <h2 className='text-xl font-bold text-gray-900 pb-6'>Community links (optional)</h2>
 

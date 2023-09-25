@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faDiscord, faSlack, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-import SubscribeFormComponent from '@components/modules/SubscribeFormComponent'
+import SubscribeFormComponent from '@/components/common/SubscribeFormComponent'
 
 import { links, navigation } from '@mocks/data'
 

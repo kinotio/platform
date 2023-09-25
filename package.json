@@ -37,7 +37,7 @@
     "moment": "^2.29.4",
     "next": "13.5.2",
     "postcode-validator": "^3.8.20",
-    "postcss": "8.4.28",
+    "postcss": "8.4.30",
     "react": "18.2.0",
     "react-country-region-selector": "^3.6.1",
     "react-datepicker": "^4.17.0",

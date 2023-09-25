@@ -35,7 +35,7 @@
     "ignore-loader": "^0.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
-    "next": "13.4.19",
+    "next": "13.5.2",
     "postcode-validator": "^3.8.20",
     "postcss": "8.4.28",
     "react": "18.2.0",

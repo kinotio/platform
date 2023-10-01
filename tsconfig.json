@@ -23,13 +23,13 @@
       "@components/*": ["./components/*"],
       "@hooks/*": ["./hooks/*"],
       "@styles/*": ["./styles/*"],
-      "@modules/*": ["./modules/*"],
       "@lib/*": ["./lib/*"],
       "@utils/*": ["./utils/*"],
       "@containers/*": ["./containers/*"],
       "@mocks/*": ["./mocks/*"],
       "@stores/*": ["./stores/*"],
-      "@pages/*": ["./pages/*"]
+      "@pages/*": ["./pages/*"],
+      "@locales/*": ["./locales/*"]
     },
     "typeRoots": ["types/**/*.d.ts", "node_modules/@types"]
   },

@@ -1,10 +1,4 @@
-<p align="center">
-  <img
-    src="./banner.png"
-    alt="Kinotio"
-    style="width:100%;"
-  />
-</p>
+# Platform
 
 ![build](https://github.com/kinotio/platform/workflows/build/badge.svg)
 ![license](https://img.shields.io/github/license/kinotio/platform?color=success)

@@ -12,7 +12,7 @@ import HeaderComponent from '@components/common/HeaderComponent'
 import FooterComponent from '@components/common/FooterComponent'
 import LoaderComponent from '@components/common/LoaderComponent'
 
-import CookieContainer from '@containers/common/CookieContainer'
+import CookieContainer from '@/containers/CookieContainer'
 
 config.autoAddCss = false
 

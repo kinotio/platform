@@ -29,7 +29,8 @@
       "@mocks/*": ["./mocks/*"],
       "@stores/*": ["./stores/*"],
       "@pages/*": ["./pages/*"],
-      "@locales/*": ["./locales/*"]
+      "@locales/*": ["./locales/*"],
+      "@layouts/*": ["./layouts/*"]
     },
     "typeRoots": ["types/**/*.d.ts", "node_modules/@types"]
   },

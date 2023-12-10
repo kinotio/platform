@@ -5,7 +5,7 @@ const hasuraEnvironment = Object.freeze({
   secret: process.env.NEXT_PUBLIC_HASURA_SECRET
 })
 
-const hasura = {
+const methods = {
   execute: async ({ query, variables }: { query: string; variables?: HasuraVariables }) => {
     const response = await fetch(hasuraEnvironment.url, {
       method: 'POST',
@@ -23,3 +23,5 @@ const hasura = {
     return data
   }
 }
+
+export const hasura = methods

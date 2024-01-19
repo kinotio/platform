@@ -48,11 +48,11 @@ const FooterComponent = () => {
         <div className='flex items-center justify-between'>
           <Link href='/'>
             <Image
-              className='h-8 w-auto pr-2'
+              className='h-auto w-auto pr-2'
               src='/assets/images/kinotio-logo-dark.png'
               alt='Kinotio Logo'
-              width='50'
-              height='50'
+              width='100'
+              height='100'
             />
           </Link>
 

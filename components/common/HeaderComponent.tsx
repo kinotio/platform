@@ -23,11 +23,11 @@ const HeaderComponent = () => {
           <a href='/' className='m-1.5 p-1.5 flex'>
             <span className='sr-only'>Kinotio</span>
             <Image
-              className='h-8 w-auto pr-2'
+              className='h-auto w-auto pr-2'
               src='/assets/images/kinotio-logo-dark.png'
               alt='Kinotio Logo'
-              width='50'
-              height='50'
+              width='100'
+              height='100'
             />
           </a>
         </div>
@@ -81,11 +81,11 @@ const HeaderComponent = () => {
             <a href='/' className='m-1.5 p-1.5 flex'>
               <span className='sr-only'>Kinotio</span>
               <Image
-                className='h-8 w-auto pr-2'
+                className='h-auto w-auto pr-2'
                 src='/assets/images/kinotio-logo-dark.png'
                 alt='Kinotio Logo'
-                width='50'
-                height='50'
+                width='100'
+                height='100'
               />
             </a>
             <button

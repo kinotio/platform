@@ -124,7 +124,7 @@ const Page = () => {
               onChange={(val: Date) => setBirthdate(val)}
             />
             <Input
-              label='position'
+              label='Position'
               name='position'
               value={position}
               className='w-full'

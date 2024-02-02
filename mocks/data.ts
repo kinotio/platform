@@ -12,8 +12,7 @@ export const navigation = [
   { name: 'Products', href: '#' },
   { name: 'Packages', href: '#' },
   { name: 'Developers', href: '#' },
-  { name: 'Events', href: '#' },
-  { name: 'Join us', href: '/join-us' }
+  { name: 'Events', href: '#' }
 ]
 
 export const features = [

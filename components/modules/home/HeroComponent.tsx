@@ -30,7 +30,13 @@ const HeroComponent = () => {
         </div>
 
         <div className='flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2'>
-          <Image src='/assets/images/to-the-moon.png' alt='Landing Moon' width='500' height='500' />
+          <Image
+            loading='eager'
+            src='/assets/images/to-the-moon.png'
+            alt='Landing Moon'
+            width='500'
+            height='500'
+          />
         </div>
       </div>
     </section>

@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { Dialog } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { UserButton, SignedIn, SignedOut } from '@clerk/nextjs'
 
 import { navigation } from '@mocks/data'
 
@@ -56,21 +55,13 @@ const HeaderComponent = () => {
           </div>
 
           <div className='flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0 lg:px-2'>
-            <SignedOut>
-              <Link
-                href='/sign-up'
-                className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center lg:mx-1'
-              >
-                Get started
-                <FontAwesomeIcon className='ml-2' icon={faChevronRight} style={{ fontSize: 16 }} />
-              </Link>
-            </SignedOut>
-
-            <SignedIn>
-              <div className='flex items-center pl-4'>
-                <UserButton afterSignOutUrl='/' />
-              </div>
-            </SignedIn>
+            <Link
+              href='/join-us'
+              className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center lg:mx-1'
+            >
+              Join Us
+              <FontAwesomeIcon className='ml-2' icon={faChevronRight} style={{ fontSize: 16 }} />
+            </Link>
           </div>
         </div>
       </nav>
@@ -111,25 +102,17 @@ const HeaderComponent = () => {
                 ))}
               </div>
               <div className='py-6'>
-                <SignedOut>
-                  <Link
-                    href='/sign-up'
-                    className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center justify-center'
-                  >
-                    Get started
-                    <FontAwesomeIcon
-                      className='ml-2'
-                      icon={faChevronRight}
-                      style={{ fontSize: 16 }}
-                    />
-                  </Link>
-                </SignedOut>
-
-                <SignedIn>
-                  <div className='flex items-center pl-4'>
-                    <UserButton afterSignOutUrl='/' />
-                  </div>
-                </SignedIn>
+                <Link
+                  href='/join-us'
+                  className='text-sm font-semibold leading-6 text-white bg-black py-2 px-4 rounded-full flex items-center lg:mx-1'
+                >
+                  Join Us
+                  <FontAwesomeIcon
+                    className='ml-2'
+                    icon={faChevronRight}
+                    style={{ fontSize: 16 }}
+                  />
+                </Link>
               </div>
             </div>
           </div>

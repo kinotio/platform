@@ -6,11 +6,9 @@ import 'react-datepicker/dist/react-datepicker.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { Poppins } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
-import { ClerkLoading, ClerkProvider, ClerkLoaded } from '@clerk/nextjs'
 
 import HeaderComponent from '@components/common/HeaderComponent'
 import FooterComponent from '@components/common/FooterComponent'
-import LoaderComponent from '@components/common/LoaderComponent'
 
 import CookieContainer from '@/containers/CookieContainer'
 
@@ -20,30 +18,17 @@ const inter = Poppins({ subsets: ['latin'], weight: '500' })
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ClerkProvider>
-      <html lang='en'>
-        <body className={inter.className}>
-          <ClerkLoading>
-            <LoaderComponent />
-          </ClerkLoading>
+    <html lang='en'>
+      <body className={inter.className}>
+        <ToastContainer hideProgressBar={true} icon={false} position='top-center' theme='colored' />
 
-          <ClerkLoaded>
-            <ToastContainer
-              hideProgressBar={true}
-              icon={false}
-              position='top-center'
-              theme='colored'
-            />
+        <HeaderComponent />
+        {children}
+        <FooterComponent />
 
-            <HeaderComponent />
-            {children}
-            <FooterComponent />
-
-            <CookieContainer />
-          </ClerkLoaded>
-        </body>
-      </html>
-    </ClerkProvider>
+        <CookieContainer />
+      </body>
+    </html>
   )
 }
 
